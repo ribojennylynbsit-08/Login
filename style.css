@@ -1,0 +1,149 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #f8edcf;
+}
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+
+    background:
+        radial-gradient(ellipse at 15% 80%, #e9dfb6 0%, transparent 40%),
+        linear-gradient(120deg, #f5e8c5, #fff5dc, #e8dfb8);
+}
+
+/* Portal title */
+
+.portal-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #34442a;
+}
+
+.portal-title h2 {
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 1.05;
+}
+
+.portal-title span {
+    color: #999f49;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    background: #d8d59c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+/* Login box */
+
+.login-box {
+    background: white;
+    width: 320px;
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px #b8aa8033;
+}
+
+.lock-icon {
+    width: 55px;
+    height: 55px;
+    background: #f0edda;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+    font-size: 25px;
+}
+
+.login-box h1 {
+    text-align: center;
+    color: #35432c;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+.login-box form > label {
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #35432c;
+}
+
+.login-box form > input:not([type="checkbox"]) {
+    width: 100%;
+    height: 36px;
+    border: 1px solid #e5dcc0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 12px;
+    outline: none;
+}
+
+.login-box input:focus {
+    border-color: #a1a64c;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 12px 0 20px;
+}
+
+.remember label {
+    font-size: 11px;
+    color: #666;
+}
+
+.login-box button {
+    width: 100%;
+    height: 38px;
+    border: none;
+    border-radius: 8px;
+    background: #a0a448;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #858a37;
+}
+
+@media (max-width: 650px) {
+    .login-page {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .portal-title h2 {
+        font-size: 19px;
+    }
+
+    .login-box {
+        width: min(100%, 320px);
+    }
+}

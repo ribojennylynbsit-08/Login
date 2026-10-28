@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Fee Portal - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-page">
+
+        <div class="portal-title">
+            <div class="logo">👥</div>
+            <h2>MEMBERSHIP<br><span>FEE PORTAL</span></h2>
+        </div>
+
+        <div class="login-box">
+
+            <div class="lock-icon">🔒</div>
+            <h1>Login</h1>
+
+            <form id="loginForm">
+
+                <label for="studentNumber">Student Number</label>
+                <input
+                    type="text"
+                    id="studentNumber"
+                    placeholder="Enter your student number"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <div class="remember">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+
+                <button type="submit">Login</button>
+
+                <p id="message"></p>
+
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const studentNumber = document.getElementById("studentNumber").value;
+            const password = document.getElementById("password").value;
+
+            if (studentNumber.trim() !== "" && password.trim() !== "") {
+                window.location.href = "dashboard.html";
+            }
+        });
+    </script>
+
+</body>
+</html>
